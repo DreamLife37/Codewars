@@ -41,3 +41,12 @@ const rps = (p1, p2) => {
     return `Player 2 won!`;
   }
 };
+
+
+//Task 4: Vowel remover
+function shortcut(string) {
+  newString = string.replace(/[aeiou]/g, "")
+  return newString;
+}
+
+console.log(shortcut('hello'))
