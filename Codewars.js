@@ -50,3 +50,34 @@ function shortcut(string) {
 }
 
 console.log(shortcut('hello'))
+
+Examples
+  "hello"-- > "hll"
+"codewars"-- > "cdwrs"
+"goodbye"-- > "gdby"
+"HELLO"-- > "HELLO"
+
+//Task 5: Student's Final Grade
+function finalGrade(exam, projects) {
+  if (exam > 90 || projects > 10) return 100
+  if (exam > 75 && projects >= 5) return 90
+  if (exam > 50 && projects >= 2) return 75
+  return 0
+}
+
+console.log(finalGrade(91, 5))
+
+
+/* 
+Examples(Inputs-->Output):
+
+100, 12 --> 100
+99, 0 --> 100
+10, 15 --> 100
+
+85, 5 --> 90
+
+55, 3 --> 75
+
+55, 0 --> 0
+20, 2 --> 0 */
