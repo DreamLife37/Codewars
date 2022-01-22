@@ -81,3 +81,10 @@ Examples(Inputs-->Output):
 
 55, 0 --> 0
 20, 2 --> 0 */
+
+//Task 6: Holiday VIII - Duty Free
+function dutyFree(normPrice, discount, hol) {
+  return Math.floor(hol / (normPrice * discount / 100))
+}
+
+console.log(dutyFree(10, 10, 500))
