@@ -67,7 +67,6 @@ function finalGrade(exam, projects) {
 
 console.log(finalGrade(91, 5))
 
-
 /* 
 Examples(Inputs-->Output):
 
@@ -86,5 +85,12 @@ Examples(Inputs-->Output):
 function dutyFree(normPrice, discount, hol) {
   return Math.floor(hol / (normPrice * discount / 100))
 }
-
 console.log(dutyFree(10, 10, 500))
+
+//Task 7: Well of Ideas - Easy Version
+//Если в массиве 1 или 2 хорошие идеи вернуть Publish, если больше 3, то I smell a series! , если нет хороших идей, то Fail!
+function well(x) {
+  const count = x.filter(x => x == 'good').length;
+  return count < 1 ? 'Fail!' :
+    count < 3 ? 'Publish!' : 'I smell a series!';
+}
