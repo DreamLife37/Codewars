@@ -94,3 +94,11 @@ function well(x) {
   return count < 1 ? 'Fail!' :
     count < 3 ? 'Publish!' : 'I smell a series!';
 }
+
+//Task 8: Sentence Smash
+//Склеить массив слов в предложение
+//['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+
+function smash (words) {
+  return words.join(" ");
+};
