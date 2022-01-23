@@ -152,3 +152,22 @@ function getGrade(s1, s2, s3) {
 }
 
 console.log(getGrade(70, 72, 78))
+
+
+//Task 12: Will there be enough space?
+//Есть ли свободные места? Если да то вывести 0, если нет, то сколько не убирается.
+/* cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
+cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting */
+function enough(cap, on, wait) {
+  let freePlaces = cap - on
+  if ((freePlaces-wait)>0) {
+    return 0
+  } else return -(freePlaces-wait)
+}
+
+console.log(enough(100, 60, 50))
+
+//либо
+function enough(cap, on, wait) {
+  return (on+wait > cap) ? on+wait-cap : 0;
+}
