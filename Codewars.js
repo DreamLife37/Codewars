@@ -102,3 +102,9 @@ function well(x) {
 function smash (words) {
   return words.join(" ");
 };
+
+//Task 9: MakeUpperCase
+//Вернуть строку в верхнем регистре
+function makeUpperCase(str) {
+  return str.toUpperCase()
+}
