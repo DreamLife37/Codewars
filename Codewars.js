@@ -99,7 +99,7 @@ function well(x) {
 //Склеить массив слов в предложение
 //['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 
-function smash (words) {
+function smash(words) {
   return words.join(" ");
 };
 
@@ -108,3 +108,23 @@ function smash (words) {
 function makeUpperCase(str) {
   return str.toUpperCase()
 }
+
+//Task 10: Quarter of the year
+//Функция возвращающая квартал в зависимости от месяца
+const quarterOf = (month) => {
+  if (month <= 3) {
+    return 1
+  }
+  if (month > 3 && month <= 6) {
+    return 2
+  }
+  if (month > 6 && month <= 9) {
+    return 3
+  }
+  if (month > 9) {
+    return 4
+  }
+}
+
+//либо
+const quarterOf = m => Math.ceil(m/3);
