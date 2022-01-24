@@ -216,22 +216,32 @@ function getSum(a, b) {
 }
 
 //либо 
-function GetSum( a,b )
-{
-   if (a == b) return a;
-   else if (a < b) return a + GetSum(a+1, b);
-   else return a + GetSum(a-1,b);
+function GetSum(a, b) {
+  if (a == b) return a;
+  else if (a < b) return a + GetSum(a + 1, b);
+  else return a + GetSum(a - 1, b);
 }
 
 
 //Task 16: Beginner Series #4 Cockroach
 //Перевод скорости из км/ч в см/с сокруглением в меньшую сторону до целого числа
 function cockroachSpeed(s) {
-  return Math.floor(s*27.778)
+  return Math.floor(s * 27.778)
 }
 
 //либо 
 function cockroachSpeed(s) {
-  return Math.floor(s*100000/3600);
+  return Math.floor(s * 100000 / 3600);
 }
 
+
+//Task 17: Is he gonna survive?
+//Выживет ли герой? Есть патроны и есть драконы, на каждого дракона требуется потратить 2 патрона
+function hero(bullets, dragons) {
+  return (bullets >= dragons * 2) ? true : false
+}
+
+//так лучше:
+function hero(bullets, dragons){
+  return bullets >= dragons * 2
+}
