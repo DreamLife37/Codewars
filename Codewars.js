@@ -308,3 +308,17 @@ function squareSum(numbers) {
     return (n * n) + sum;
   }, 0)
 }
+
+//Task 22: Convert a Boolean to a String
+//Если приходит булиновое значение true, то возвращаем строку true
+function booleanToString(b) {
+  result = b.toString()
+  return result
+}
+
+console.log(booleanToString(true))
+
+//либо
+function booleanToString(b) {
+  return b ? 'true' : 'false';
+}
