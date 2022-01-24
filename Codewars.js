@@ -139,14 +139,15 @@ const quarterOf = m => Math.ceil(m / 3);
 
 function getGrade(s1, s2, s3) {
   let score = (s1 + s2 + s3) / 3
-  if (score >= 90) {  return 'A'
-  } else if ( score >= 80) {
+  if (score >= 90) {
+    return 'A'
+  } else if (score >= 80) {
     return 'B'
-  } else  if (score >= 70) {
+  } else if (score >= 70) {
     return 'C'
-  } else  if (score >= 60) {
+  } else if (score >= 60) {
     return 'D'
-  } else  if (score < 60) {
+  } else if (score < 60) {
     return 'F'
   }
 }
@@ -160,14 +161,24 @@ console.log(getGrade(70, 72, 78))
 cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting */
 function enough(cap, on, wait) {
   let freePlaces = cap - on
-  if ((freePlaces-wait)>0) {
+  if ((freePlaces - wait) > 0) {
     return 0
-  } else return -(freePlaces-wait)
+  } else return -(freePlaces - wait)
 }
 
 console.log(enough(100, 60, 50))
 
 //либо
 function enough(cap, on, wait) {
-  return (on+wait > cap) ? on+wait-cap : 0;
+  return (on + wait > cap) ? on + wait - cap : 0;
+}
+
+//Task 13: Beginner Series #1 School Paperwork
+//Посчитать сколько нужно страниц скопировать, если n - одноклассников, а m - столько страниц в документах.
+
+function paperwork(n, m) {
+  if (n < 0 || m < 0) {
+    return 0
+  }
+  return n * m
 }
