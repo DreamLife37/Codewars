@@ -242,6 +242,23 @@ function hero(bullets, dragons) {
 }
 
 //так лучше:
-function hero(bullets, dragons){
+function hero(bullets, dragons) {
   return bullets >= dragons * 2
 }
+
+
+//Task 18: Calculate BMI
+function bmi(weight, height) {
+  let index = weight / (height * height)
+  if (index <= 18.5) {
+    return 'Underweight'
+  }
+  if (index <= 25) {
+    return 'Normal'
+  }
+  if (index <= 30) {
+    return 'Overweight'
+  } else return 'Obese'
+}
+
+console.log(bmi(74, 1.7))
