@@ -281,3 +281,13 @@ function repeatStr(n, s) {
     str += s;
   return str;
 }
+
+//Taks 20: Twice as old
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld-sonYearsOld*2)
+}
+
+//либо 
+function twiceAsOld(a, b) {
+  return a>2*b ? a-2*b : 2*b-a;
+}
