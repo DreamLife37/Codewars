@@ -182,3 +182,16 @@ function paperwork(n, m) {
   }
   return n * m
 }
+
+//либо 
+function paperwork(n, m) {
+  return n > 0 && m > 0 ? n * m : 0
+}
+
+//Task 14: Beginner Series #2 Clock
+//Посчитать время от 00 в миллисекундах
+function past(h, m, s) {
+  return h * 3600000 + m * 60000 + s * 1000
+}
+
+console.log(past(0, 1, 1))
