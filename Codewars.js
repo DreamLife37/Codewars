@@ -282,12 +282,29 @@ function repeatStr(n, s) {
   return str;
 }
 
-//Taks 20: Twice as old
+//Task 20: Twice as old
 function twiceAsOld(dadYearsOld, sonYearsOld) {
-  return Math.abs(dadYearsOld-sonYearsOld*2)
+  return Math.abs(dadYearsOld - sonYearsOld * 2)
 }
 
 //либо 
 function twiceAsOld(a, b) {
-  return a>2*b ? a-2*b : 2*b-a;
+  return a > 2 * b ? a - 2 * b : 2 * b - a;
+}
+
+//Task 21: Square(n) Sum
+//Каждое переданное число возвести в квадрат и вывести сумму
+//For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+function squareSum(numbers) {
+  let result = numbers.map(number => Math.pow(number, 2)).reduce((total, amount) => total + amount, 0);
+  return result
+}
+
+console.log(squareSum([1, 3]))
+
+//либо
+function squareSum(numbers) {
+  return numbers.reduce(function (sum, n) {
+    return (n * n) + sum;
+  }, 0)
 }
