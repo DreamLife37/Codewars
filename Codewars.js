@@ -195,3 +195,22 @@ function past(h, m, s) {
 }
 
 console.log(past(0, 1, 1))
+
+//Task 15: Beginner Series #3 Sum of Numbers
+//Посчитать сумму всех целых чисел между ними, либо если числа равные вернуть любое из них.
+function getSum(a, b) {
+  if (a == b) {
+    return a
+  }
+  let sum = 0;
+  if (a > b) {
+    for (let i = b; i <= a; i++) {
+      sum = sum + i
+    }
+  } else {
+    for (let i = a; i <= b; i++) {
+      sum = sum + i
+    }
+  }
+  return sum
+}
