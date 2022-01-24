@@ -262,3 +262,22 @@ function bmi(weight, height) {
 }
 
 console.log(bmi(74, 1.7))
+
+//либо
+function bmi(weight, height) {
+  var bmi = weight / (height * height);
+  return bmi < 18.5 ? "Underweight" : bmi <= 25 ? "Normal" : bmi <= 30 ? "Overweight" : "Obese";
+}
+
+//Task 19: String repeat
+function repeatStr(n, s) {
+  return s.repeat(n)
+}
+
+//либо
+function repeatStr(n, s) {
+  var str = "";
+  for (var i = 0; i < n; i++)
+    str += s;
+  return str;
+}
