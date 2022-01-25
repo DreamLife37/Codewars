@@ -322,3 +322,21 @@ console.log(booleanToString(true))
 function booleanToString(b) {
   return b ? 'true' : 'false';
 }
+
+//Task 23: Abbreviate a Two Word Name
+//Sam Harris => S.H
+//patrick feeney => P.F
+
+function abbrevName(name) {
+  name = name.toUpperCase()
+  i = name.indexOf(' ')
+  result = name[0] + '.' + name[i + 1]
+  return result
+}
+console.log(abbrevName('Andrey Schavelev'))
+
+//либо
+function abbrevName(name) {
+  var nameArray = name.split(" ");
+  return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+}
