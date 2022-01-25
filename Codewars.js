@@ -340,3 +340,19 @@ function abbrevName(name) {
   var nameArray = name.split(" ");
   return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
 }
+
+//Task 24 Convert a String to a Number!
+"1234" --> 1234
+"605"  --> 605
+"1405" --> 1405
+"-7" --> -7
+
+var stringToNumber = function(str){
+  number = Number(str)
+  return number;
+}
+
+//либо
+var stringToNumber = function(str){
+  return parseInt(str);
+}
