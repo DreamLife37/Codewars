@@ -358,7 +358,7 @@ var stringToNumber = function (str) {
 }
 
 
-//Task 25:Drink about
+//Task 25: Drink about
 function peopleWithAgeDrink(old) {
   switch (true) {
     case (old >= 21):
@@ -393,3 +393,32 @@ const peopleWithAgeDrink = (age) =>
   age < 14 ? "drink toddy" :
   age < 18 ? "drink coke" :
   age < 21 ? "drink beer" : "drink whisky"
+
+//Task 26: A Needle in the Haystack
+
+var haystack_1 = ['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false];
+
+function findNeedle(haystack) {
+  haystack.map((element, index) => {
+    if (element == 'needle') {
+      console.log(element, index)
+      position = index
+    }
+  })
+  return "found the needle at position " + position;
+}
+
+console.log(findNeedle(haystack_1))
+
+//либо
+function findNeedle(array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === 'needle')
+      return 'found the needle at position ' + i;
+  }
+}
+
+//либо
+function findNeedle(haystack) {
+  return "found the needle at position " + haystack.indexOf("needle");
+}
