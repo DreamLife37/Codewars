@@ -422,3 +422,20 @@ function findNeedle(array) {
 function findNeedle(haystack) {
   return "found the needle at position " + haystack.indexOf("needle");
 }
+
+//Task 26: Area or Perimeter
+
+area_or_perimeter(6, 10) -- > 32
+area_or_perimeter(3, 3) -- > 9
+
+const areaOrPerimeter = function (l, w) {
+  if (l == w) {
+    return l * w
+  }
+  return (l + w) * 2
+};
+
+//либо 
+const areaOrPerimeter = function (l, w) {
+  return l == w ? l * w : 2 * (l + w)
+};
