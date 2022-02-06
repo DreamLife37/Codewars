@@ -423,7 +423,7 @@ function findNeedle(haystack) {
   return "found the needle at position " + haystack.indexOf("needle");
 }
 
-//Task 26: Area or Perimeter
+//Task 27: Area or Perimeter
 
 area_or_perimeter(6, 10) -- > 32
 area_or_perimeter(3, 3) -- > 9
@@ -439,3 +439,17 @@ const areaOrPerimeter = function (l, w) {
 const areaOrPerimeter = function (l, w) {
   return l == w ? l * w : 2 * (l + w)
 };
+
+//Task 28: Reversed sequence
+//Создайте функцию, которая возвращает массив целых чисел от n до 1, где n>0.
+//Пример: n=5-->[5,4,3,2,1]
+
+const reverseSeq = n => {
+  newArray = []
+  for (let i = n; i > 0; i--) {
+    newArray.push(i)
+  }
+  return newArray;
+};
+
+console.log(reverseSeq(5))
