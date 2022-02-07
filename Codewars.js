@@ -453,3 +453,20 @@ const reverseSeq = n => {
 };
 
 console.log(reverseSeq(5))
+
+//Task 29: Remove First and Last Character
+//Удалить первый и последний символ в строке
+function removeChar(str) {
+  let newStr = ''
+  for (let i = 1; i < str.length - 1; i++) {
+    newStr += str[i]
+  }
+  return newStr
+};
+
+console.log(removeChar('Hello'))
+
+//либо
+function removeChar(str) {
+  return str.slice(1, -1);
+}
