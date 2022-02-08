@@ -470,3 +470,42 @@ console.log(removeChar('Hello'))
 function removeChar(str) {
   return str.slice(1, -1);
 }
+
+//Task 30: Count of positives / sum of negatives
+//Вернуть массив из двух чисел: Количество положительных и сумму отрицательных
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
+
+function countPositivesSumNegatives(input) {
+  newArr = [0, 0]
+  if (input === null || input.length < 1) {
+    return [];
+  }
+  input.forEach((item, index) => {
+    if (item > 0) {
+      newArr[0] += 1
+      // console.log(count)
+    }
+    if (item < 0) {
+      newArr[1] += item
+      //console.log(sum)
+    }
+  })
+  return newArr;
+}
+
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
+
+//либо
+function countPositivesSumNegatives(input) {
+  if (input == null || input.length == 0)
+    return [];
+  var positive = 0;
+  var negative = 0;
+  for (var i = 0, l = input.length; i < l; ++i) {
+    if (input[i] > 0)
+      ++positive;
+    else
+      negative += input[i];
+  }
+  return [positive, negative];
+}
