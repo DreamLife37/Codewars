@@ -509,3 +509,24 @@ function countPositivesSumNegatives(input) {
   }
   return [positive, negative];
 }
+
+//Task 31: Sum The Strings
+
+Example: (Input1, Input2-- > Output)
+"4", "5"-- > "9"
+"34", "5"-- > "39"
+"", ""-- > "0"
+"2", ""-- > "2"
+"-5", "3"-- > "-2"
+
+function sumStr(a, b) {
+  const num1 = Number(a);
+  const num2 = Number(b);
+  return String(num1 + num2)
+}
+console.log(sumStr("", ""))
+
+//либо
+function sumStr(a, b) {
+  return (+a + +b) + ''
+}
