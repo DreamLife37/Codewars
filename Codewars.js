@@ -530,3 +530,40 @@ console.log(sumStr("", ""))
 function sumStr(a, b) {
   return (+a + +b) + ''
 }
+
+//Task 32: Sum of Multiples
+/* Find the sum of all multiples of n below m
+Examples
+sumMul(2, 9) == > 2 + 4 + 6 + 8 = 20
+sumMul(3, 13) == > 3 + 6 + 9 + 12 = 30
+sumMul(4, 123) == > 4 + 8 + 12 + ... = 1860
+sumMul(4, -7) == > "INVALID" */
+
+function sumMul(n, m) {
+  let sum = 0
+
+  if (n < m) {
+    for (let i = n; i <= m; i++) {
+      if ((i % n) == 0) {
+        sum += i
+      }
+    }
+    return sum
+  }
+  return 'INVALID'
+}
+
+console.log(sumMul(2, 9))
+
+//либо:
+function sumMul(n, m) {
+  if (n >= m) return "INVALID";
+  var sum = 0;
+  for (var i = n; i < m; i += n) {
+    sum += i;
+  }
+  return sum;
+}
+
+//либо 
+const sumMul = (n, m) => ~~(m / n) * (m + n - m % n) / 2 || 'INVALID';
