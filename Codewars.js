@@ -567,3 +567,17 @@ function sumMul(n, m) {
 
 //либо 
 const sumMul = (n, m) => ~~(m / n) * (m + n - m % n) / 2 || 'INVALID';
+
+//Task 33: Convert a Number to a String!
+123 --> "123"
+999 --> "999"
+function numberToString(num) {
+  return String(num)
+}
+
+console.log(numberToString(123))
+
+//либо:
+function numberToString(num) {
+  return ''+num;
+}
