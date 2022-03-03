@@ -588,12 +588,15 @@ function numberToString(num) {
 // * "Hello World" -> "HHeelllloo  WWoorrlldd"
 // * "1234!_ "     -> "11223344!!__  "
 function doubleChar(str) {
+  let newStr = ''
   for (let i = 0; i < str.length ; i++) {
-    char=str[i]+str[i]
-    let strNew=char
-  }
-  return strNew
+     newStr += str.charAt(i)+str.charAt(i)
+      }
+  return newStr
 }
 
 console.log(doubleChar('String'))
+
+//либо:
+const doubleChar = (str) => str.split("").map(c => c + c).join("");
 
