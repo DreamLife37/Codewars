@@ -581,3 +581,19 @@ console.log(numberToString(123))
 function numberToString(num) {
   return ''+num;
 }
+
+//Task 34: Double Char
+// Examples (Input -> Output):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+// * "1234!_ "     -> "11223344!!__  "
+function doubleChar(str) {
+  for (let i = 0; i < str.length ; i++) {
+    char=str[i]+str[i]
+    let strNew=char
+  }
+  return strNew
+}
+
+console.log(doubleChar('String'))
+
