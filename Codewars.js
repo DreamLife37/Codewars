@@ -600,3 +600,12 @@ console.log(doubleChar('String'))
 //либо:
 const doubleChar = (str) => str.split("").map(c => c + c).join("");
 
+//Task 35: USD => CNY
+/* * 15  -> '101.25 Chinese Yuan'
+* 465 -> '3138.75 Chinese Yuan' */
+function usdcny(usd) {
+  converter=`${(6.75*usd).toFixed(2)} Chinese Yuan`
+  return converter
+}
+
+//либо const usdcny = usd => `${(usd*6.75).toFixed(2)} Chinese Yuan`;
