@@ -609,3 +609,15 @@ function usdcny(usd) {
 }
 
 //либо const usdcny = usd => `${(usd*6.75).toFixed(2)} Chinese Yuan`;
+
+//Task 36: Filter out the geese
+//Удалить из исходного массива, другой массив
+["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
+["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+["Mallard", "Hook Bill", "Crested", "Blue Swedish"] 
+
+function gooseFilter (birds) {
+  const geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    return birds.filter((elm) => !geese.includes(elm))
+};
+console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
