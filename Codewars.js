@@ -621,3 +621,9 @@ function gooseFilter (birds) {
     return birds.filter((elm) => !geese.includes(elm))
 };
 console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
+
+//Task 37: Is the date today
+function isToday(date) {
+  const yesterday = new Date();
+  return yesterday.toDateString() === date.toDateString();
+}
