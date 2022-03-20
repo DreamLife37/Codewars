@@ -569,8 +569,9 @@ function sumMul(n, m) {
 const sumMul = (n, m) => ~~(m / n) * (m + n - m % n) / 2 || 'INVALID';
 
 //Task 33: Convert a Number to a String!
-123 --> "123"
-999 --> "999"
+123-- > "123"
+999-- > "999"
+
 function numberToString(num) {
   return String(num)
 }
@@ -579,7 +580,7 @@ console.log(numberToString(123))
 
 //либо:
 function numberToString(num) {
-  return ''+num;
+  return '' + num;
 }
 
 //Task 34: Double Char
@@ -589,9 +590,9 @@ function numberToString(num) {
 // * "1234!_ "     -> "11223344!!__  "
 function doubleChar(str) {
   let newStr = ''
-  for (let i = 0; i < str.length ; i++) {
-     newStr += str.charAt(i)+str.charAt(i)
-      }
+  for (let i = 0; i < str.length; i++) {
+    newStr += str.charAt(i) + str.charAt(i)
+  }
   return newStr
 }
 
@@ -602,9 +603,9 @@ const doubleChar = (str) => str.split("").map(c => c + c).join("");
 
 //Task 35: USD => CNY
 /* * 15  -> '101.25 Chinese Yuan'
-* 465 -> '3138.75 Chinese Yuan' */
+ * 465 -> '3138.75 Chinese Yuan' */
 function usdcny(usd) {
-  converter=`${(6.75*usd).toFixed(2)} Chinese Yuan`
+  converter = `${(6.75*usd).toFixed(2)} Chinese Yuan`
   return converter
 }
 
@@ -614,11 +615,11 @@ function usdcny(usd) {
 //Удалить из исходного массива, другой массив
 ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
 ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
-["Mallard", "Hook Bill", "Crested", "Blue Swedish"] 
+["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
 
-function gooseFilter (birds) {
+function gooseFilter(birds) {
   const geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-    return birds.filter((elm) => !geese.includes(elm))
+  return birds.filter((elm) => !geese.includes(elm))
 };
 console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
 
@@ -627,3 +628,27 @@ function isToday(date) {
   const yesterday = new Date();
   return yesterday.toDateString() === date.toDateString();
 }
+
+//Task 38: Find Maximum and Minimum Values of a List
+/* * [4,6,2,1,9,63,-134,566]         -> max = 566, min = -134
+ * [-52, 56, 30, 29, -54, 0, -110] -> min = -110, max = 56
+ * [42, 54, 65, 87, 0]             -> min = 0, max = 87
+ * [5]                             -> min = 5, max = 5 */
+var min = function (list) {
+  var min = list.reduce(function (a, b) {
+    return Math.min(a, b);
+  });
+  return min;
+}
+
+var max = function (list) {
+  var max = list.reduce(function (a, b) {
+    return Math.max(a, b);
+  });
+  return max;
+}
+console.log(max([42, 54, 65, 87, 0]))
+
+//либо
+const min = (list) => Math.min(...list);
+const max = (list) => Math.max(...list);
