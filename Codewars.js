@@ -652,3 +652,23 @@ console.log(max([42, 54, 65, 87, 0]))
 //либо
 const min = (list) => Math.min(...list);
 const max = (list) => Math.max(...list);
+
+//Task 39: Removing Elements
+//["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+function removeEveryOther(arr) {
+  let newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 == 0) {
+      newArr.push(arr[i])
+    }
+  }
+  return newArr
+}
+
+//либо
+function removeEveryOther(arr) {
+  let newArr = arr.filter((el, index) => index % 2 === 0)
+  return newArr
+}
+
+console.log(removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep", ]))
