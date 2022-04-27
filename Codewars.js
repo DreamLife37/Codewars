@@ -694,3 +694,17 @@ function findMultiples(int, limit) {
 
   return result
 }
+
+//Task 41: String cleaning
+/* '! !'                 -> '! !'
+'123456789'           -> ''
+'This looks5 grea8t!' -> 'This looks great!' */
+
+function stringClean(s){
+  return s.replace(/\d/g, '')
+}
+
+/* либо:
+function stringClean(s){
+  return s.replace(/[0-9]/g, '');
+} */
