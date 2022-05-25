@@ -700,7 +700,7 @@ function findMultiples(int, limit) {
 '123456789'           -> ''
 'This looks5 grea8t!' -> 'This looks great!' */
 
-function stringClean(s){
+function stringClean(s) {
   return s.replace(/\d/g, '')
 }
 
@@ -708,3 +708,27 @@ function stringClean(s){
 function stringClean(s){
   return s.replace(/[0-9]/g, '');
 } */
+
+
+//Task 42: I love you, a little , a lot, passionately ... not at all
+/* Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
+
+I love you
+a little
+a lot
+passionately
+madly
+not at all */
+
+function howMuchILoveYou(nbPetals) {
+  let obj = {
+    0: "not at all",
+    1: "I love you",
+    2: "a little",
+    3: "a lot",
+    4: "passionately",
+    5: "madly"
+  }
+  return obj[nbPetals % 6]
+}
+console.log(howMuchILoveYou(5))
