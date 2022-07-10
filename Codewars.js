@@ -756,3 +756,21 @@ console.log(countSheeps([true, true, true, false,
 function countSheeps(arrayOfSheeps) {
   return arrayOfSheeps.filter(Boolean).length;
 }
+
+//Task 44: Powers of 2
+Examples
+//n = 0  ==> [1]        # [2^0]
+//n = 1  ==> [1, 2]     # [2^0, 2^1]
+//n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
+
+
+function powersOfTwo(n) {
+  let myArray = [];
+  for (let i = 0; i <= n; i++) {
+    myArray.push(2 ** i);
+  }
+  return myArray
+}
+
+//либо
+powersOfTwo = n => [...Array(n + 1)].map((e, i) => Math.pow(2, i));
