@@ -774,3 +774,10 @@ function powersOfTwo(n) {
 
 //либо
 powersOfTwo = n => [...Array(n + 1)].map((e, i) => Math.pow(2, i));
+
+
+//Task 45: Capitalization and Mutability
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
+}
+console.log(capitalizeWord('andre'))
