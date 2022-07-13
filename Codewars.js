@@ -781,3 +781,23 @@ function capitalizeWord(word) {
   return word[0].toUpperCase() + word.slice(1);
 }
 console.log(capitalizeWord('andre'))
+
+//Task 46: Divide and Conquer
+function divCon(x) {
+  let sumNumber = 0
+  let sumString = 0
+  for (i = 0; i < x.length; i++) {
+    if (typeof x[i] === 'number') {
+      sumNumber += x[i]
+    } else sumString += Number(x[i])
+  }
+  return sumNumber - sumString
+
+}
+
+console.log(divCon([9, 3, '7', '3']))
+
+//либо
+function divCon(x){
+  return x.reduce((acc, cur) => typeof cur === 'number'? acc + cur : acc - Number(cur),0)
+}
