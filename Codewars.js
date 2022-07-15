@@ -798,6 +798,35 @@ function divCon(x) {
 console.log(divCon([9, 3, '7', '3']))
 
 //либо
-function divCon(x){
-  return x.reduce((acc, cur) => typeof cur === 'number'? acc + cur : acc - Number(cur),0)
+function divCon(x) {
+  return x.reduce((acc, cur) => typeof cur === 'number' ? acc + cur : acc - Number(cur), 0)
+}
+
+
+//Task 47: Chain me
+
+/* function add(num) {
+  return num + 1;
+}
+
+function mult(num) {
+  return num * 30;
+}
+
+chain(2, [add, mult]);
+// returns 90; */
+
+function chain(input, fs) {
+  return fs.reduce(function (input, fn) {
+    return fn(input)
+  }, input);
+}
+
+//либо
+function chain(input, func) {
+  try {
+    return func.reduce((acc, el) => el(acc), input)
+  } catch {
+    return "Error: chain function does not work"
+  }
 }
